@@ -56,7 +56,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--tex
 #urgency-bar{position:fixed;top:0;left:0;right:0;z-index:300;background:#F5C518;color:#0C0C0C;height:40px;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;letter-spacing:.4px;box-shadow:0 2px 8px rgba(0,0,0,.25);padding:0 12px;text-align:center}
 
 /* NAV */
-nav{background:var(--black);padding:12px 20px;display:flex;align-items:center;justify-content:center;position:sticky;top:40px;z-index:200;border-bottom:2px solid var(--red)}
+nav{background:var(--black);padding:12px 20px;display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:200;border-bottom:2px solid var(--red)}
 
 /* SHARED */
 section{padding:60px 20px}
@@ -224,18 +224,6 @@ footer{background:var(--black);color:#555;text-align:center;padding:32px 20px;fo
 </style>
 </head>
 <body>
-
-<!-- LIVE PURCHASE TOAST -->
-<div id="toast">
-  <span class="t-dot"></span>
-  <span class="t-name" id="t-name">Mariana S.</span> acabou de comprar o Do Zero ao Infoproduto em 24h
-  <div class="t-sub" id="t-sub">Há 3 minutos · Brasil</div>
-</div>
-
-<!-- URGENCY BAR -->
-<div id="urgency-bar">
-  <span>🔥 Oferta de lançamento por tempo limitado — pagamento único</span>
-</div>
 
 <!-- NAV -->
 <nav>
@@ -504,7 +492,7 @@ function showToast(){
   setTimeout(()=>el.style.opacity='1',10);
   setTimeout(()=>{el.style.opacity='0';setTimeout(()=>el.style.display='none',400);},5000);
 }
-setTimeout(()=>{showToast();setInterval(showToast,25000);},8000);
+
 </script>
 
 <script>
